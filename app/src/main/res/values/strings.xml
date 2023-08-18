@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string-array name="degress">
+        <item>encryptdata.txt</item>
+        <item>keyEnvelop.txt</item>
+    </string-array>
+</resources>

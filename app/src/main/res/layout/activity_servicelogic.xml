@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Servicelogic">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="141dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:textColor="#B13737"
+            android:layout_marginTop="100px"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="Welcome!   " />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#321C1C" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/makesessionkey"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="getsessionkey"
+            android:text="生成会话密钥"
+            />
+
+        <EditText
+            android:id="@+id/sessionkeyval"
+            android:layout_width="281dp"
+            android:layout_height="48dp"
+            android:hint="会话密钥："
+            android:textColor="#B13737"
+            android:letterSpacing="0.15"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/encrptyfils"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.54"
+            android:onClick="encryptfile1"
+            android:text="加密文件" />
+
+        <Spinner
+            android:id="@+id/choessfile"
+            android:layout_width="22dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:entries="@array/degress" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+
+        <Button
+            android:id="@+id/uploaddata"
+            android:layout_width="14dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="uploadfile"
+            android:text="上传数据" />
+
+        <Spinner
+            android:id="@+id/sendfile"
+            android:layout_width="22dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+             />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="141dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/searchqukuai"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_res"
+            android:onClick="viewownfile"
+            android:text="查询文件"
+            android:textColor="#ffffff"/>
+
+        <Spinner
+            android:id="@+id/showuserfiles"
+            android:layout_width="186dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:entries="@array/degress"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="@drawable/button_res"
+            android:onClick="getfileinfo"
+            android:text="获取文件"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/getfiles"
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_res"
+            android:onClick="downloadfile"
+            android:text="点击下载"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:id="@+id/showresult"
+            android:layout_width="144dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:hint="进度："
+            android:letterSpacing="0.15"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="117dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/decrptykeyEnvlope"
+                android:layout_width="258dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_res"
+                android:onClick="decryptkeyenvlop"
+                android:text="解密密钥信封"
+                android:textColor="#ffffff" />
+
+            <Spinner
+                android:id="@+id/showkeyenvelop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="266dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_res"
+                android:onClick="decryptfile"
+                android:layout_gravity="center"
+                android:text="解密文件"
+                android:textColor="#ffffff" />
+
+            <Spinner
+                android:id="@+id/showneeddecrp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/uploadown"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="70dp"
+            android:text="上传下载" />
+
+        <Button
+            android:id="@+id/personal"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="70dp"
+            android:text="个人中心" />
+
+    </LinearLayout>
+
+</LinearLayout>
